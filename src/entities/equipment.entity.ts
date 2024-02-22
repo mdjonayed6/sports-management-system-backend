@@ -1,18 +1,13 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity({ name: 'teams' })
-export class TeamEntity {
+@Entity({ name: 'equipments' })
+export class EquipmentEntity {
 
     @PrimaryGeneratedColumn({ type: 'bigint' })
     id: number;
 
     @Column({ unique: true })
-    userId: number;
-    @Column({ unique: true })
-    teamName: string;
-    @Column({ unique: true })
-    coach: string;
-    
+    username: string;
     @Column({ unique: true })
     email: string;
     @Column()

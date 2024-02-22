@@ -5,6 +5,9 @@ export class UserEntity {
 
     @PrimaryGeneratedColumn({ type: 'bigint' })
     id: number;
+    
+    @Column({ unique: true })
+    userId: number;
 
     @Column({ unique: true })
     username: string;
@@ -26,7 +29,7 @@ export class UserEntity {
 
     @Column()
     dateOfBirth: string;
-    
+
     @Column()
     gender: string;
 

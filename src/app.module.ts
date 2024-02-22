@@ -11,6 +11,12 @@ import { FacilityEntity } from './entities/facility.entity';
 import { FinanceEntity } from './entities/finance.entity';
 import { CommunicationEntity } from './entities/communication.entity';
 import { PerformanceEntity } from './entities/performance.entity';
+import { InjuryEntity } from './entities/injury.entity';
+import { EquipmentEntity } from './entities/equipment.entity';
+import { ContentEntity } from './entities/content.entity';
+import { ScoutingEntity } from './entities/scouting.entity';
+import { ComplianceEntity } from './entities/compliance.entity';
+import { AccessEntity } from './entities/access.entity';
 
 
 @Module({
@@ -22,7 +28,7 @@ import { PerformanceEntity } from './entities/performance.entity';
     username: 'root',
     password: '',
     database: 'sports_management_system',
-    entities: [UserEntity,TeamEntity,PlayerEntity,CoachEntity,ScheduleEntity,FacilityEntity,FinanceEntity,CommunicationEntity,PerformanceEntity],
+    entities: [UserEntity,TeamEntity,PlayerEntity,CoachEntity,ScheduleEntity,FacilityEntity,FinanceEntity,CommunicationEntity,PerformanceEntity,InjuryEntity,EquipmentEntity,ContentEntity,ScoutingEntity,ComplianceEntity,AccessEntity],
     synchronize: true
   }),],
   controllers: [AppController],
