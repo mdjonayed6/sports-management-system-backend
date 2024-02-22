@@ -7,11 +7,24 @@ export class FacilityEntity {
     id: number;
 
     @Column({ unique: true })
-    username: string;
+    userId: number;
+
     @Column({ unique: true })
-    email: string;
+    facilityName: string;
+
+    @Column({ unique: true })
+    location: string;
+
     @Column()
-    password: string;
+    capacity: string;
+    @Column()
+    availability: boolean;
+    @Column()
+    createFacility: string;
+    @Column()
+    updateFacility: string;
+    @Column()
+    deleteFacility: string;
 
     @Column()
     createdAt: Date;

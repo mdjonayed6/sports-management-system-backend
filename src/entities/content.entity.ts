@@ -7,11 +7,20 @@ export class ContentEntity {
     id: number;
 
     @Column({ unique: true })
-    username: string;
+    userId:  number;
     @Column({ unique: true })
-    email: string;
+    contentId: number;
     @Column()
-    password: string;
+    type: string;
+    @Column()
+    title: string;
+    @Column()
+    content: string;
+    @Column()
+    updateContent: string;
+    @Column()
+    uploadMedia: string;
+
 
     @Column()
     createdAt: Date;

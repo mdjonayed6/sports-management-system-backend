@@ -12,7 +12,13 @@ export class TeamEntity {
     teamName: string;
     @Column({ unique: true })
     coach: string;
-    
+
+    @Column({ unique: true })
+    staff: string;
+
+    @Column({ unique: true })
+    players: string;
+
     @Column({ unique: true })
     email: string;
     @Column()
@@ -20,6 +26,16 @@ export class TeamEntity {
 
     @Column()
     createdAt: Date;
+
+    @Column()
+    createTeam: string;
+    @Column()
+    updateTeam: string;
+    @Column()
+    deleteTeam: string;
+    @Column()
+    manageTeamRoster: string;
+
 
     @Column({ nullable: true })
     authStrategy: string;

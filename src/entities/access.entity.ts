@@ -7,11 +7,17 @@ export class AccessEntity {
     id: number;
 
     @Column({ unique: true })
-    username: string;
+    userId: number;
     @Column({ unique: true })
-    email: string;
+    securityId: number;
     @Column()
-    password: string;
+    measure: string;
+    @Column()
+    accessControl: string;
+    @Column()
+    implementSecurityMeasures: string; // need help
+    @Column()
+    controlAccess: string; // need help
 
     @Column()
     createdAt: Date;

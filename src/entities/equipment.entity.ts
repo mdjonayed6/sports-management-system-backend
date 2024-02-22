@@ -7,11 +7,19 @@ export class EquipmentEntity {
     id: number;
 
     @Column({ unique: true })
-    username: string;
+    userId: string;
     @Column({ unique: true })
-    email: string;
+    equipmentId: number;
     @Column()
-    password: string;
+    equipmentsName: string;
+    @Column()
+    quantity: string;
+    @Column({ unique: true })
+    status: string
+    @Column()
+    manageInventory: string;
+    @Column()
+    trackUsage: string;
 
     @Column()
     createdAt: Date;

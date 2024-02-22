@@ -7,11 +7,17 @@ export class ScoutingEntity {
     id: number;
 
     @Column({ unique: true })
-    username: string;
+    userId: number;
     @Column({ unique: true })
-    email: string;
+    scoutingId: number;
     @Column()
-    password: string;
+    player: string;
+    @Column()
+    report: string;
+    @Column()
+    manageScoutingReports: string;
+    @Column()
+    coordinateRecruitment: string;
 
     @Column()
     createdAt: Date;

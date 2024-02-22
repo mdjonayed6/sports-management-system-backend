@@ -6,12 +6,22 @@ export class PerformanceEntity {
     @PrimaryGeneratedColumn({ type: 'bigint' })
     id: number;
 
+
     @Column({ unique: true })
-    username: string;
+    userId: number; 
     @Column({ unique: true })
-    email: string;
+    analysisId: number;
     @Column()
-    password: string;
+    player: string;
+    @Column()
+    team: string;
+    @Column()
+    statistics: string
+    @Column({ unique: true })
+    viewPlayerPerformance: string;
+    @Column()
+    generateReports: string;
+
 
     @Column()
     createdAt: Date;

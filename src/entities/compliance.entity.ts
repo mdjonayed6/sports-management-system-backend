@@ -7,11 +7,17 @@ export class ComplianceEntity {
     id: number;
 
     @Column({ unique: true })
-    username: string;
+    userId: number; 
     @Column({ unique: true })
-    email: string;
+    complianceId: number;
     @Column()
-    password: string;
+    rule: string;
+    @Column()
+    documentation: string;
+    @Column()
+    ensureCompliance: string;
+    @Column()
+    manageDocumentation: string;
 
     @Column()
     createdAt: Date;

@@ -7,11 +7,19 @@ export class CommunicationEntity {
     id: number;
 
     @Column({ unique: true })
-    username: string;
+    userId:number; 
     @Column({ unique: true })
-    email: string;
+    messageId: number;
     @Column()
-    password: string;
+    sender: string;
+    @Column()
+    recipients: string;
+    @Column()
+    message: string;
+    @Column()
+    sendAnnouncement: string;
+    @Column()
+    facilitateCommunication: string;
 
     @Column()
     createdAt: Date;

@@ -5,6 +5,9 @@ export class CoachEntity {
 
     @PrimaryGeneratedColumn({ type: 'bigint' })
     id: number;
+    
+    @Column({ unique: true })
+    userId: number;
 
     @Column({ unique: true })
     username: string;
@@ -13,7 +16,7 @@ export class CoachEntity {
     email: string;
 
     @Column({ unique: true })
-    phoneNumber: string; //mistake
+    phoneNumber: number;
 
     @Column()
     password: string;
@@ -22,7 +25,7 @@ export class CoachEntity {
     fullName: string;
 
     @Column({ unique: true })
-    profilePicture: string; // ????
+    profilePicture: string;
 
     @Column()
     dateOfBirth: string;
@@ -31,13 +34,20 @@ export class CoachEntity {
     gender: string;
 
     @Column({ unique: true })
-    role: string; // ????
+    role: string;
+
+    @Column({ unique: true })
+    coachingSpecialization: string
 
     @Column()
     nationality: string;
 
     @Column()
     createdAt: Date;
+    @Column()
+    viewCoachInfo: string;
+    @Column()
+	updateCoachInfo: string;
 
     @Column({ nullable: true })
     authStrategy: string;

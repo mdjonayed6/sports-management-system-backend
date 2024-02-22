@@ -16,7 +16,7 @@ export class UserEntity {
     email: string;
 
     @Column({ unique: true })
-    phoneNumber: string; //mistake
+    phoneNumber: number; 
 
     @Column()
     password: string;
@@ -41,6 +41,15 @@ export class UserEntity {
 
     @Column()
     createdAt: Date;
+    @Column()
+    createAccount: string;
+    @Column()
+    updateAccount: string;
+    @Column()
+    deleteAccount: string;
+    @Column()
+    assignRolesAndPermissions: string;
+
 
     @Column({ nullable: true })
     authStrategy: string;

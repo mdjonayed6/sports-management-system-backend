@@ -7,32 +7,21 @@ export class InjuryEntity {
     id: number;
 
     @Column({ unique: true })
-    username: string;
-
+    userId: number; 
     @Column({ unique: true })
-    email: string;
-
-    @Column({ unique: true })
-    phoneNumber: string; //mistake
-
+    injuryId: number;
     @Column()
-    password: string;
-
+    player: string;
     @Column()
-    fullName: string;
-
-    @Column({ unique: true })
-    profilePicture: string; // ????
-
+    type: string;
     @Column()
-    dateOfBirth: string;
-    
+    rehabilitationProgress: string;
+    @Column()
+    trackInjury: string;
+    @Column()
+    recordRehabilitation: string;  
     @Column()
     gender: string;
-
-    @Column({ unique: true })
-    role: string; // ????
-
     @Column()
     nationality: string;
 

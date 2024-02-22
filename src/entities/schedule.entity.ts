@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn, Timestamp } from "typeorm";
 
 @Entity({ name: 'schedule' })
 export class ScheduleEntity {
@@ -7,14 +7,35 @@ export class ScheduleEntity {
     id: number;
 
     @Column({ unique: true })
-    username: string;
+    userId: number;
+
     @Column({ unique: true })
-    email: string;
+    scheduleId: string;
+    
     @Column()
-    password: string;
+    type: string;
+    
+    @Column()
+    date: Date;
+    
+    @Column({ unique: true })
+    time: string;
+    
+    @Column()
+    location: string;
 
     @Column()
     createdAt: Date;
+   
+    @Column()
+    createSchedule: string;
+    
+    @Column()
+    updateSchedule: string;
+    
+    @Column()
+    deleteSchedule: string;
+
 
     @Column({ nullable: true })
     authStrategy: string;
